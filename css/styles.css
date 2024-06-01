@@ -128,3 +128,39 @@ img{
     font-size: 6rem;
     font-weight: 900;
 }
+
+/* Icons */
+
+.icons{
+    margin: calc(var(--separations)/2) 0;
+}
+
+@media (min-width:768px) {
+    .icons{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+    }  
+}
+
+.icon img{
+    width: 5rem;
+}
+.icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon h3{
+    color: var(--primary);
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.icon img, 
+.icon h3,
+.icon p{
+    margin-top: calc(var(--separations)/2);
+}
