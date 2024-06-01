@@ -1,0 +1,130 @@
+/* Custom Properties*/
+:root{
+    --primary : #1073BA;
+    --secondary : #00DA55;
+    --grey: #3B3B3B;
+    --white: #FFFFFF;
+    --black: #1F1E1E;
+    --separations: 5rem;
+    --sourceMain : "Roboto" , sanserif;
+    --sourceSecondary : "Lato" , sanserif;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;  /* 1rem => 10px */
+}
+
+*,*::after,*::before{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: var(--sourceMain);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+/* Globales*/
+.container{
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+h1, h2, h3{
+    font-weight: 900;
+    font-family: var(--sourceSecondary);
+    margin: calc(var(--separations) / 2) ;
+}
+
+h1{
+    font-size: 4.4rem;
+}
+
+h2{
+    font-size: 3.6rem;
+}
+
+h3{
+    font-size: 2.8rem;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+/* Utilities */
+.text-center{
+    text-align: center;
+}
+
+/* Degraded*/
+.degraded-green{
+    color: transparent;
+    background: linear-gradient(to right, var(--primary) 0%, var(--secondary) 100%); 
+    -webkit-background-clip: text;
+}
+
+/* Header */
+.header{
+    background-color: var(--black);
+    padding: calc(var(--separations)*2) 0;
+    color: var(--white);
+}
+
+@media (min-width:768px) {
+    .header{
+        padding: calc(var(--separations)*1) 0;
+    }
+}
+
+@media (min-width:768px) {
+    .content-header{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+.text-header{
+    text-align: center;
+    padding-top: var(--separations);
+}
+
+@media (min-width:768px) {
+    .text-header{
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0;
+    }
+}
+
+.text-header p{
+    margin: 0;
+}
+
+.tagline-product{
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.name-product{
+    font-size: 6rem;
+    margin: 0;
+}
+
+@media (min-width:768px) {
+    .name-product{
+        font-size: 10rem;
+        line-height: 1;
+    }
+}
+
+.price-prodcut span{
+    font-size: 6rem;
+    font-weight: 900;
+}
