@@ -164,3 +164,63 @@ img{
 .icon p{
     margin-top: calc(var(--separations)/2);
 }
+
+/* Sobre Tech PRO */
+.about-tech{
+    background-image: linear-gradient(to bottom, transparent 50%, var(--primary) 0%),
+    url("../img/imagen-mujer.jpg");
+    background-position: right;
+    background-repeat: repeat, no-repeat;
+    background-size: 100%, 110rem;
+}
+
+@media (min-width:768px) {
+    .about-tech{
+        background-image: linear-gradient(to left, transparent 50%, var(--primary) 0%),
+        url("../img/imagen-mujer.jpg");
+        background-position: right;
+        background-repeat: repeat, no-repeat;
+    }
+}
+
+
+.about-tech-grid{
+    display: grid;
+    grid-template-rows: repeat(2 , 40rem);
+    row-gap: var(--separations);
+}
+
+@media (min-width:768px) {
+    .about-tech-grid{
+        grid-template-rows: unset;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 4rem;
+        row-gap: unset;
+        padding: calc(var(--separations)*2);
+    }
+}
+
+.text-about-tech{
+    grid-row:  2/3;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-bottom:var(--separations);
+}
+
+@media (min-width:768px) {
+    .text-about-tech{
+        padding-bottom: 0;
+    }   
+}
+
+.text-about-tech h2{
+    font-size: 4rem;
+    margin-left: 0;
+}
+
+.text-about-tech p{
+    font-size: 2rem;
+    line-height: 2;
+}
